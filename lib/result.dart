@@ -30,7 +30,24 @@ class Result extends StatelessWidget {
           style: const TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
           textAlign: TextAlign.center,
         ),
-        ElevatedButton(onPressed: resetQuiz, child: const Text('Restart Quiz'))
+        ElevatedButton(
+          onPressed: resetQuiz,
+          style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.orange, foregroundColor: Colors.black),
+          child: const Text('Restart Quiz'),
+        ),
+        TextButton(
+          onPressed: resetQuiz,
+          style: TextButton.styleFrom(foregroundColor: Colors.black),
+          child: const Text('Restart Quiz'),
+        ),
+        OutlinedButton(
+          onPressed: resetQuiz,
+          style: OutlinedButton.styleFrom(
+              foregroundColor: Colors.orange,
+              side: const BorderSide(color: Colors.pink)),
+          child: const Text('Restart Quiz'),
+        )
       ],
     ));
   }
